@@ -1,0 +1,32 @@
+doctype html
+html
+	head
+		meta(charset='Content-Type', content='text/html, charset=UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title
+		meta(description='' content='')
+		meta(keywords='' content='')
+		link(rel="stylesheet" href="css/screen.css")
+	body
+		.wrapper
+			header
+				block header
+			block banner
+				.banner-top
+			.container
+				.inner
+					block breadcrumb
+						.breadcrumbs
+							a(href="/")
+								span Главная
+							span
+								block PageBread
+									|Инерная
+					block leftMenu
+					block content				
+					.clear
+					block before_footer	
+		footer
+			.inner
+				block footer
+		script(src="/js/scripts.js")

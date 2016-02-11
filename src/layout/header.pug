@@ -1,0 +1,19 @@
+block header
+	.inner
+		.logo
+			a
+				span.name-company Авангард
+				span.descr-company порядок в охране
+		.menu
+			ul
+				- list = ["Услуги", "Прайс", "Лицензии","Сотрудничество", "Вопрос-ответ", "Статьи", "Клиенты", "Вакансии", "Контакты"]
+				each item in list
+					li
+						a(href="#")
+							span #{item}
+		.telephone-call
+			.phone
+				a(href="tel:+74953693003") +7 (495) 369-30-03 
+			.call-back
+				a.orange-button(href="#")
+					span Заказать звонок

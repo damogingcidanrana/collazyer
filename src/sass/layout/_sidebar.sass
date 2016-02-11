@@ -1,0 +1,86 @@
+aside
+  padding-top: 36px
+.left-menu
+  padding: 27px 0
+  width: 100%
+  position: relative
+  &:after
+    display: block
+    content: ''
+    position: absolute
+    top: 0
+    left: 30px
+    right: 0
+    height: 27px
+    background: url("/img/template/left-menu-top.png") no-repeat top right
+  &:before
+    display: block
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 30px
+    height: 27px
+    background: url("/img/template/left-menu-top.png") no-repeat top left
+  .left-menu-inner
+    padding: 18px 0
+    background: url("/img/template/left-menu-bg.jpg")
+    position: relative
+    &:after
+      display: block
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 15px
+      height: 100%
+      background: url("/img/template/left-menu-middle.png") repeat-y left top
+    &:before
+      display: block
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      width: 17px
+      height: 100%
+      background: url("/img/template/left-menu-middle.png") repeat-y right top
+  .left-menu-bottom
+    &:after
+      display: block
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 30px
+      right: 0
+      height: 31px
+      background: url("/img/template/left-menu-bottom.png") no-repeat bottom right
+    &:before
+      display: block
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 30px
+      height: 31px
+      background: url("/img/template/left-menu-bottom.png") no-repeat bottom left
+ul.services
+  li
+    width: 100%
+    padding: 13px 22px
+    cursor: pointer
+    position: relative
+    z-index: 2
+    a
+      display: inline-block
+      padding-left: 18px
+      font-size: 13px
+      line-height: 16px
+    &:hover
+      background: rgba(255,204,0,0.2)
+.left-menu-title
+  font-size: 24px
+  +font-family("PFCentroSlabPro")
+  font-weight: bold
+  line-height: 24px
+  margin-bottom: 19px
+  margin-left: 35px

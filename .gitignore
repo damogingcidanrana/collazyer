@@ -1,0 +1,7 @@
+/design/
+/collazyer-design_svg/
+/build/
+/node_modules/
+*.docx
+*.tmp
+.sass-cache/

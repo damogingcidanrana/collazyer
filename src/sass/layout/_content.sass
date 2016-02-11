@@ -1,0 +1,54 @@
+.content
+  padding-top: 10px
+  padding-bottom: 40px
+  a.bold
+    font-weight: bold
+  a
+    color: #000
+    &:hover
+      text-decoration: none
+
+    &.left
+      float: left
+      margin: 0 20px 10px 0
+
+      /* +adapt(bf-ld-mobile)
+        float: none
+        margin: 10px auto */
+
+    &.right
+      float: right
+      margin: 0 0 10px 20px
+
+      /* +adapt(bf-ld-mobile)
+        float: none
+        margin: 10px auto */
+
+  p
+    font-size: 14px
+    /* font-family: $miri */
+    line-height: 20px
+
+  ul, ol
+    padding-left: 10px
+    list-style: disc
+    list-style-position: inside
+
+    li
+      margin-bottom: 9px
+
+    &.ico-v2
+      list-style: none
+
+      li
+        margin-bottom: 9px
+        padding-left: 20px
+        /* background: inline-image("base64/v2.png") no-repeat 0 5px */
+
+  ol
+    list-style: decimal
+    margin-left: 13px
+    font-size: 15px
+    margin-bottom: 1em
+
+  table
