@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 gulp.task('connect', function () {
     connect.server({
         root: path.build.html,
-        port: 4379,
+        port: 4380,
         livereload: true
     });
 });
@@ -79,6 +79,7 @@ gulp.task('style:build', function () {
             project_path: __dirname + '/..',
             css: path.build.css,
             sass: 'src/sass',
+            image: 'src/img/template',
             sourcemap: true,
             relative: false
         }))

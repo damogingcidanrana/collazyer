@@ -1,10 +1,15 @@
 extends ./layout/base.pug
 include ./layout/header.pug
 block banner
-	.index-banner
+	.think-globally
+		img(src="/img/template/banner.png")
+		.text-globally
+			span.one-text Think globally.
+			span.two-text Act locally.
+		a.button.register(href="#") register	
 block breadcrumb
 block content
 	.content
 		.content-inner
-		
+block ModalWindow
 include ./layout/footer.pug
