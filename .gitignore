@@ -3,5 +3,6 @@
 /build/
 /node_modules/
 *.docx
+*.doc
 *.tmp
 .sass-cache/
