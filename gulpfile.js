@@ -5,21 +5,13 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rigger = require('gulp-rigger'),
     cssmin = require('gulp-clean-css'),
-    connect = require('gulp-connect'),
+//    connect = require('gulp-connect'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     pug = require('gulp-pug'),
     sprites = require('gulp.spritesmith'),
     rename = require("gulp-rename"),
     compass = require('gulp-compass');
-
-gulp.task('connect', function () {
-    connect.server({
-        root: path.build.html,
-        port: 4380,
-        livereload: true
-    });
-});
 
 var path = {
     build: {
@@ -34,7 +26,7 @@ var path = {
     src: {
         html: 'src/*.pug',
         js: 'src/js/scripts.js',
-        style: 'src/sass/*.sass',  //Здесь указывается собирающий файл sass
+        style: 'src/sass/*.sass',
         img: 'src/img/**/*.*',
         img_template: 'src/img/template/*.*',
         img_bs64: 'src/img/base64/*.*',
@@ -56,16 +48,14 @@ gulp.task('html:build', function () {
         .pipe(pug({
             pretty: true,
         }))
-        .pipe(gulp.dest(path.build.html))
-        .pipe(connect.reload());
+        .pipe(gulp.dest(path.build.html));
 });
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js) 
         .pipe(rigger())
        // .pipe(uglify()) 
-        .pipe(gulp.dest(path.build.js))
-        .pipe(connect.reload());
+        .pipe(gulp.dest(path.build.js));
 });
 
 gulp.task('style:build', function () {
@@ -87,8 +77,7 @@ gulp.task('style:build', function () {
         .pipe(gulp.dest(path.build.css))
         .pipe(cssmin())
         .pipe(rename({suffix: ".min"}))
-        .pipe(gulp.dest(path.build.css))
-        .pipe(connect.reload());
+        .pipe(gulp.dest(path.build.css));
 });
 
 gulp.task('image:build', function () {
@@ -107,8 +96,7 @@ gulp.task('image:build', function () {
             use: [pngquant()],
             interlaced: true
         }))
-        .pipe(gulp.dest(path.build.img_content))
-        .pipe(connect.reload());
+        .pipe(gulp.dest(path.build.img_content));
     gulp.src(path.src.img_template) 
         .pipe(imagemin({
             progressive: true,
@@ -116,14 +104,12 @@ gulp.task('image:build', function () {
             use: [pngquant()],
             interlaced: true
         }))
-        .pipe(gulp.dest(path.build.img_template))
-        .pipe(connect.reload());
+        .pipe(gulp.dest(path.build.img_template));
 });
 
 gulp.task('fonts:build', function() {
     gulp.src(path.src.fonts)
-        .pipe(gulp.dest(path.build.fonts))
-        .pipe(connect.reload());
+        .pipe(gulp.dest(path.build.fonts));
 });
 
 gulp.task('build', [
@@ -154,4 +140,4 @@ gulp.task('watch', function(){
 });
 
 
-gulp.task('default', ['connect', 'build', 'watch']);
+gulp.task('default', [ 'build', 'watch']);
