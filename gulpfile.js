@@ -15,13 +15,13 @@ var gulp = require('gulp'),
 
 var path = {
     build: {
-        html: 'build/',
-        js: 'build/js/',
-        css: 'build/css/',
-        img_template: 'build/img/template',
-        img_bs64:'build/img/template/base64',
-        img_content: 'build/img/',
-        fonts: 'build/fonts/'
+        html: 'html/',
+        js: 'html/js/',
+        css: 'html/css/',
+        img_template: 'html/img/template',
+        img_bs64:'html/img/template/base64',
+        img_content: 'html/img/',
+        fonts: 'html/fonts/'
     },
     src: {
         html: 'src/*.pug',
