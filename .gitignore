@@ -10,3 +10,6 @@
 gulpfile.js
 package.json
 *.py
+.viminfo
+/backend/.venv/
+/backend/__pycache__/

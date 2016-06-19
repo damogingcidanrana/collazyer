@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 //    connect = require('gulp-connect'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    pug = require('gulp-pug'),
+//    pug = require('gulp-pug'),
     sprites = require('gulp.spritesmith'),
     rename = require("gulp-rename"),
     compass = require('gulp-compass');
@@ -43,13 +43,13 @@ var path = {
     }
 };
 
-gulp.task('html:build', function () {
+/*gulp.task('html:build', function () {
     gulp.src(path.src.html) 
         .pipe(pug({
             pretty: true,
         }))
         .pipe(gulp.dest(path.build.html));
-});
+});*/
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js) 
@@ -113,7 +113,7 @@ gulp.task('fonts:build', function() {
 });
 
 gulp.task('build', [
-    'html:build',
+   // 'html:build',
     'js:build',
     'style:build',
     'fonts:build',
@@ -122,9 +122,9 @@ gulp.task('build', [
 
 
 gulp.task('watch', function(){
-    watch([path.watch.html], function(event, cb) {
+    /*watch([path.watch.html], function(event, cb) {
         gulp.start('html:build');
-    });
+    });*/
     watch([path.watch.style], function(event, cb) {
         gulp.start('style:build');
     });
