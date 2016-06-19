@@ -6,7 +6,7 @@
 *.doc
 *.tmp
 .sass-cache/
-/www/
+/html/
 gulpfile.js
 package.json
 *.py
