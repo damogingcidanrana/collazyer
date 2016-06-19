@@ -1,0 +1,52 @@
+.overlay
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 300
+	display: table
+	background: rgba(42,127,255,0.8)
+	display: none
+	cursor: pointer
+	.modal-window
+		cursor: default
+		display: inline-block
+		border-radius: 5px
+		background: #fff
+		padding: 45px 30px
+		.modal-inner
+			.modal-title
+				font-size: 15px
+				text-align: center
+			form
+				margin-top: 25px
+				.form-str
+					margin-bottom: 15px
+					label
+						display: block
+						text-align: left
+						font-size: 11px
+						margin-bottom: 5px
+					input
+						height: 38px
+						width: 100%
+						border-radius: 5px
+						border: 1px solid rgb(218,222,223)
+				input[type="submit"]
+					margin-top: 25px
+					display: inline-block
+					width: 175px
+					max-width: 100%
+					padding: 10px
+					color: #fff
+					text-transform: uppercase
+					border-radius: 5px
+					background: rgb(42,127,255)
+					border: 0
+.overlay-inner
+	display: table-cell
+	height: 100%
+	width: 100%
+	vertical-align: middle
+	text-align: center

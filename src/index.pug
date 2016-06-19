@@ -2,14 +2,38 @@ extends ./layout/base.pug
 include ./layout/header.pug
 block banner
 	.think-globally
-		img(src="/img/template/banner.png")
+		img(src="/img/template/banner.png",alt="")
 		.text-globally
 			span.one-text Think globally.
 			span.two-text Act locally.
-		a.button.register(href="#") register	
+		a.button.register(href="#") register
+	.think-globally.dollars
+		img(src="/img/template/dollars.png",alt="")
+		.text-globally
+			span.one-text How it
+			span.two-text works?
 block breadcrumb
 block content
-	.content
-		.content-inner
 block ModalWindow
+	.overlay
+		.overlay-inner
+			.modal-window
+				.modal-inner
+					.register-form
+						.modal-title Register
+						form(name="register")
+							.form-str
+								label(for="email") E-mail
+								input(name="email",type="text")
+							input(type="submit",value="register")
+					.login-form
+						.modal-title Login
+						form(name="Login")
+							.form-str
+								label(for="login") Login
+								input(name="login",type="text")
+							.form-str
+								label(for="password") Password
+								input(name="password",type="password")
+							input(type="submit",value="login")
 include ./layout/footer.pug
