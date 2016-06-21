@@ -21,7 +21,7 @@ $('.slider-subdomain ul').bxSlider({
 $('.imgblock').imgRotate({
 	nameformul: '00001',
 	delimiter: '',
-	way: '/img/r2/',
+	way: 'http://collazyer.ru/img/r2/',
 	direction:'right',	
 	mode: 'auto',
 	speed: 2000	
