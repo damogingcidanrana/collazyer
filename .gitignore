@@ -9,7 +9,8 @@
 /html/
 gulpfile.js
 package.json
-*.py
 .viminfo
 /backend/.venv/
 /backend/__pycache__/
+__pycache__
+__init__
