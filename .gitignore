@@ -1,4 +1,8 @@
 /design/
+/.cache/
+/.config/
+.gitignore.swp
+/.ssh/
 /collazyer-design_svg/
 /build/
 /node_modules/
